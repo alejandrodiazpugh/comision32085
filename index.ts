@@ -1,17 +1,17 @@
 // Desafío 1: CLASES.
 
-type Libros = [{ //marca error si lo tengo como type Object[]
-    titulo: string,
-    autor: string,
-}]
+// type Libros = [{ //marca error si lo tengo como type Object[]
+//     titulo: string,
+//     autor: string,
+// }]
 
 class Usuario {
     nombre: string;
     apellidos: string;
-    libros: Libros;
+    libros: {titulo: string, autor:string}[];
     mascotas: string[];
 
-    constructor(nombre:string, apellidos:string, libros: Libros, mascotas:string[]) {
+    constructor(nombre:string, apellidos:string, libros: {titulo: string, autor:string}[], mascotas:string[]) {
        this.nombre = nombre;
        this.apellidos = apellidos;
        this.libros = libros;

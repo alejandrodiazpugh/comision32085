@@ -1,4 +1,8 @@
 // Desafío 1: CLASES.
+// type Libros = [{ //marca error si lo tengo como type Object[]
+//     titulo: string,
+//     autor: string,
+// }]
 var Usuario = /** @class */ (function () {
     function Usuario(nombre, apellidos, libros, mascotas) {
         this.nombre = nombre;
