@@ -9,7 +9,7 @@ interface product { // interface para la estructura de los productos
   price: number;
 }
 
-class Contenedor {
+export default class Contenedor { // modifique el tipo de exportacion
   ruta: string;
 
   constructor(ruta: string) {
@@ -76,13 +76,3 @@ class Contenedor {
   }
 }
 
-async function main() {
-  let product1 = new Contenedor("./files/productos.json");  // Pruebas con el JSON
-  console.log(await product1.getById(1));
-  console.log(await product1.save({ titulo: "testdummy", precio: 299 }));
-//   console.log(await product1.deleteById(3));
-//   product1.deleteAll();
-  return console.log('Termine');
-}
-
-main();
