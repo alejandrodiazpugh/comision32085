@@ -22,5 +22,11 @@
     "titulo": "Keychron K2 60% Mechanical KB",
     "precio": 2300,
     "url": "https://cdn.shopify.com/s/files/1/0059/0630/1017/products/Keychron-K2-wireless-mechanical-keyboard-for-Mac-Windows-iOS-Gateron-switch-brown-with-type-C-RGB-white-backlight-exclusive-color_1800x1800.jpg?v=1650445595"
+  },
+  {
+    "id": 5,
+    "titulo": "Logitech K380",
+    "precio": "1799",
+    "url": "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/gallery/k380-grey-gallery-01-ori.png"
   }
 ]
