@@ -9,19 +9,34 @@
 body {
   font-family: sans-serif;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-inline: 2rem;
+}
 .container {
-  width: 400px;
-  height: 500px;
+  width: 100%;
   -webkit-box-shadow: 1px 2px 17px 9px rgba(191, 191, 191, 0.5);
   box-shadow: 1px 2px 17px 9px rgba(191, 191, 191, 0.5);
   border-radius: 0.7rem;
   margin-block: 50px;
-  margin-inline: 50%;
-  transform: translate(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+#form {
+  grid-column: span 1;
+}
+#table {
+  grid-column: 2 / span 2;
+}
+#chat {
+  grid-column: span 3;
+}
+
 form {
   margin-block: 10vh;
   width: 100%;
@@ -31,16 +46,15 @@ form {
 }
 
 label {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 input {
-    margin-block-start: 5px;
-    margin-block-end: 3px;
-    padding-inline: 5px;
-    padding-block: 2px;
+  margin-block-start: 5px;
+  margin-block-end: 3px;
+  padding-inline: 5px;
+  padding-block: 2px;
 }
-
 
 .title {
   width: 100%;
@@ -49,11 +63,10 @@ input {
 }
 
 .line {
-    width: 90%;
-    height: 1px;
-    background-color: rgb(49, 103, 211);
-    opacity: 0.6;
-
+  width: 90%;
+  height: 1px;
+  background-color: rgb(49, 103, 211);
+  opacity: 0.6;
 }
 button {
   padding: 0.625rem;
@@ -64,18 +77,17 @@ button {
   padding: 15px;
   cursor: pointer;
   transition: 200ms ease-in-out;
-  color: #FFF
+  color: #fff;
 }
 
 button:hover,
 button:focus {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 button:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
-
 
 .tableImg {
   width: 20%;
@@ -84,22 +96,46 @@ button:active {
 
 table {
   table-layout: fixed;
-  margin-inline: auto;
-  width: 70vw;
-  margin-block: 150px;
-  -webkit-box-shadow: 1px 2px 17px 9px rgba(191, 191, 191, 0.5);
-  box-shadow: 1px 2px 17px 9px rgba(191, 191, 191, 0.5);
-  border-radius: 0.7rem;
+  margin-block-start: 50px;
+  width: 90%;
 }
 
 td {
-  height:max-content;
+  height: max-content;
 }
 
 td {
-  border-top: 1px solid rgb(49, 103, 211) ;
+  border-top: 1px solid rgb(49, 103, 211);
 }
 
-table, th, td {
+table,
+th,
+td {
   text-align: center;
+}
+
+textarea {
+  font-family: sans-serif;
+  width: 180px;
+  resize: none;
+  margin-block-start: 5px;
+  margin-block-end: 3px;
+  padding-inline: 5px;
+  padding-block: 2px;
+}
+
+.areaMsg {
+  display: flex;
+  flex-wrap: wrap;
+  width: 550px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media only screen and (max-width: 978px) {
+  #form,
+  #table,
+  #chat {
+    grid-column: span 3;
+  }
 }

@@ -6,11 +6,7 @@ const fs = require('fs');
 const PATH = '../desafioHandleBars/src/data/productos.json'
 
 routerFormulario.get('/', (req, res) => {
-    res.render('form', {});
-})
-
-routerFormulario.get('/productos', (req, res) => {
-    res.render('productos', {productos})
+    res.render('form', {productos});
 })
 
 routerFormulario.post('/', (req,res) => {
@@ -23,7 +19,7 @@ routerFormulario.post('/', (req,res) => {
     const { titulo, precio, url} = req.body;
     productos.push({id, ...req.body});
     fs.promises.writeFile(PATH, JSON.stringify(productos));
-    res.redirect('/productos');
+    res.redirect('/');
 })
 
 module.exports = routerFormulario;
