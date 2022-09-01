@@ -6,7 +6,7 @@ const fs = require('fs');
 const PATH = '../desafioHandleBars/src/data/productos.json'
 
 routerFormulario.get('/', (req, res) => {
-    res.render('form', {productos});
+    res.render('index', {productos});
 })
 
 routerFormulario.post('/', (req,res) => {

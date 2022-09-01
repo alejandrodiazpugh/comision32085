@@ -1,10 +1,12 @@
 // ============================ MODULOS ===================================
 const express = require('express');
 const exphbs = require('express-handlebars');
+const fs = require('fs')
 const { Server: HttpServer } = require('http');
 const { Server: IOServer } = require('socket.io');
 const path = require('path');
 const morgan = require('morgan');
+const productos = require('./src/data/productos.json');
 
 
 
@@ -14,6 +16,7 @@ const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
 const routerProductos = require('./src/routes/productos.routes');
 const routerFormulario = require('./src/routes/formulario.routes');
+const { fstat } = require('fs');
 
 // ============================ MIDDLEWARE ================================
 app.use(express.json());
@@ -24,6 +27,8 @@ app.use(express.static(path.join(__dirname, '/public')));
 // ===== BASE DE DATOS ============
 
 const DB_MENSAJES = []
+const DB_PRODUCTOS = productos; // PASO EXTRA, tal vez redundante, pero mi logica es no querer meter directamente al JSON el parseo
+
 
 // ====== MOTOR DE PLANTILLAS =====
 app.set('views', path.join(__dirname, 'src/views'));
@@ -47,7 +52,7 @@ app.get('*', (req, res) => {
 
 // ========================== SERVIDOR ====================================
 const PORT = 8080;
-const server = app.listen(PORT, () => {
+const server = httpServer.listen(PORT, () => {
     console.log(`Servidor levantado en http://localhost:${PORT}`)
 })
 
@@ -58,12 +63,26 @@ server.on('error', (err) => {
 
 // ========================== WEBSOCKET ===================================
 io.on('connection', (socket) => {
-    console.log(`Nuevo cliente conectado ${socket.id}`);
-    socket.emit('from-server-messages', {DB_MENSAJES});
+    socket.emit('from-server-messages', DB_MENSAJES);
+    socket.emit('from-server-products', DB_PRODUCTOS);
 
     socket.on('from-client-message', mensaje => {
         DB_MENSAJES.push(mensaje);
-        io.sockets.emit('from-server-messages', {DB_MENSAJES})
+        io.sockets.emit('from-server-messages', DB_MENSAJES)
+    })
+
+    socket.on('from-client-product', producto => {
+        let id;
+        if (DB_PRODUCTOS.length == 0) { // Revisa si ya existen DB_PRODUCTOS en el archivo
+          id = 1;
+        } else {
+          id = DB_PRODUCTOS[DB_PRODUCTOS.length - 1].id + 1;
+        }
+        const productoConId = {id, ...producto}
+
+        DB_PRODUCTOS.push(productoConId);
+        fs.promises.writeFile('./src/data/productos.json', JSON.stringify(DB_PRODUCTOS));
+        io.sockets.emit('from-server-products', DB_PRODUCTOS);
     })
 })
 
