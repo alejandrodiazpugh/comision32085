@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"timestamp": "6/8/2022 00:34:35",
+		"nombre": "Happy Hacking Keyboard Professional Hybrid 45g",
+		"descripcion": "Teclado mejorado funciones como Bluetooth, reasignación de teclas y USB de tipo C, para que puedas utilizar el HHKB en todos tus dispositivos modernos.",
+		"codigo": "HHKB3",
+		"url": "https://cdn11.bigcommerce.com/s-bj9b4ipm7o/images/stencil/1280x1280/products/3369/7414/hhkb_3_hybrid_charcoal_blank_ecomm_296701__34156.1585925345.jpg?c=2",
+		"precio": 4799,
+		"stock": 10
+	},
+	{
+		"id": 2,
+		"timestamp": "6/8/2022 00:36:39",
+		"nombre": "Keychron K8 TKL Mechanical Keyboard",
+		"descripcion": "teclado mecánico inalámbrico para Mac, retroiluminación blanca, Bluetooth, multitarea, teclado para juegos con cable tipo C para Windows con interruptor rojo Gateron G Pro",
+		"codigo": "KCK8",
+		"url": "https://cdn.shopify.com/s/files/1/0059/0630/1017/products/Keychron-K8-tenkeyless-wireless-mechanical-keyboard-for-Mac-Windows-iOS-RGB-white-backlight-with-Gateron-switch-brown_1800x1800.jpg?v=1622187479",
+		"precio": 2199,
+		"stock": 10
+	},
+	{
+		"id": 3,
+		"timestamp": "6/8/2022 00:38:40",
+		"nombre": "Logitech Cherry MX 60%",
+		"descripcion": "Teclado inalámbrico iluminado de alto desempeño",
+		"codigo": "LC60",
+		"url": "https://resource.logitech.com/w_800,c_lpad,ar_1:1,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/mx-mechanical/gallery/mx-mechanical-mini/mx-mechanical-mini-mini-keyboard-top-view-graphite-us.png?v=1",
+		"precio": 1599,
+		"stock": 10
+	},
+	{
+		"id": 4,
+		"timestamp": "6/8/2022 00:40:14",
+		"nombre": "Keychron K2 60% Mechanical KB",
+		"descripcion": "Teclado mecánico inalámbrico Bluetooth con diseño del 60% con interruptor Gateron G Pro marrón/retroiluminación LED blanca/USB C/anti fantasma/N-Key Rollover, teclado para juegos de 84 teclas para Mac Windows",
+		"codigo": "KCK2",
+		"url": "https://cdn.shopify.com/s/files/1/0059/0630/1017/products/Keychron-K2-wireless-mechanical-keyboard-for-Mac-Windows-iOS-Gateron-switch-brown-with-type-C-RGB-white-backlight-exclusive-color_1800x1800.jpg?v=1650445595",
+		"precio": 2300,
+		"stock": 10
+	},
+	{
+		"id": 5,
+		"timestamp": "6/8/2022 00:41:06",
+		"nombre": "Keychron Q2 Mechanical Keyboard",
+		"descripcion": "Teclado mecánico inalámbrico Bluetooth con diseño del 60% con interruptor Gateron G Pro azul/retroiluminación LED blanca/USB C/anti fantasma/N-Key Rollover, teclado para juegos de 84 teclas para Mac Windows",
+		"codigo": "KCQ2",
+		"url": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychron-q2gray1-1635527456626.png?v=1635527475",
+		"precio": 2699,
+		"stock": 10
+	}
+]

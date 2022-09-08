@@ -1,0 +1,134 @@
+/*============================ IMPORTS =========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap");
+
+/*============================ RESET Y VARIABLES ================================= */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr000: #dfe0e2;
+  --clr100: #949ba0;
+  --clr200: #9dacb2;
+  --clr300: #a0b9fb;
+  --clr400: #a5ccd1;
+}
+
+/*============================  TYPOGRAPHY ===================================== */
+
+body {
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: var(--clr000);
+}
+
+/*============================  NAVBAR LAYOUT  ================================= */
+
+.navbar {
+  width: 100vw;
+  height: 90px;
+  display: flex;
+  background-color: var(--clr100);
+  padding-inline: 2rem;
+  align-items: center;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  margin-block-start: 30px;
+  cursor: pointer;
+}
+
+.navLinks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navLink {
+  color: #000;
+  cursor: pointer;
+}
+
+.link,
+.link--mod {
+  text-decoration: none;
+  color: #000;
+}
+.link:hover,
+.link:focus {
+  color: #333;
+}
+
+/*============================  ERROR 404 LAYOUT  ================================= */
+
+.container {
+  width: 100vw;
+  height: auto;
+}
+
+.error {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 0.7rem;
+  box-shadow: 5px 3px 5px 1px #9dacb2;
+}
+
+/*============================  CARD LAYOUT  ================================= */
+
+.cardContainer {
+    width: 100vw;
+    padding-block-start: 2rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  width: 18rem;
+  height: 24rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.7rem;
+  box-shadow: 8px 9px 12px -1px rgba(157, 172, 178, 0.75);
+  -webkit-box-shadow: 8px 9px 12px -1px rgba(157, 172, 178, 0.75);
+  -moz-box-shadow: 8px 9px 12px -1px rgba(157, 172, 178, 0.75);
+}
+
+.cardImg {
+  width: 18rem;
+  height: 8rem;
+  margin-block-start: 1rem;
+  object-fit: cover;
+}
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardTitle {
+    text-align: center;
+    height: 5rem;
+}

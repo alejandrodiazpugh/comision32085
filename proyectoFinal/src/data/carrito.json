@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"timestamp": "7/9/2022 23:12:51",
+		"productos": [
+			{
+				"id": 5,
+				"timestamp": "6/8/2022 00:41:06",
+				"nombre": "Keychron Q2 Mechanical Keyboard",
+				"descripcion": "Teclado mecánico inalámbrico Bluetooth con diseño del 60% con interruptor Gateron G Pro azul/retroiluminación LED blanca/USB C/anti fantasma/N-Key Rollover, teclado para juegos de 84 teclas para Mac Windows",
+				"codigo": "KCQ2",
+				"url": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychron-q2gray1-1635527456626.png?v=1635527475",
+				"precio": 2699,
+				"stock": 10
+			}
+		]
+	},
+	{
+		"id": 2,
+		"timestamp": "7/9/2022 23:13:29",
+		"productos": [
+			{
+				"id": 3,
+				"timestamp": "6/8/2022 00:38:40",
+				"nombre": "Logitech Cherry MX 60%",
+				"descripcion": "Teclado inalámbrico iluminado de alto desempeño",
+				"codigo": "LC60",
+				"url": "https://resource.logitech.com/w_800,c_lpad,ar_1:1,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/mx-mechanical/gallery/mx-mechanical-mini/mx-mechanical-mini-mini-keyboard-top-view-graphite-us.png?v=1",
+				"precio": 1599,
+				"stock": 10
+			},
+			{
+				"id": 3,
+				"timestamp": "6/8/2022 00:38:40",
+				"nombre": "Logitech Cherry MX 60%",
+				"descripcion": "Teclado inalámbrico iluminado de alto desempeño",
+				"codigo": "LC60",
+				"url": "https://resource.logitech.com/w_800,c_lpad,ar_1:1,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/mx-mechanical/gallery/mx-mechanical-mini/mx-mechanical-mini-mini-keyboard-top-view-graphite-us.png?v=1",
+				"precio": 1599,
+				"stock": 10
+			}
+		]
+	}
+]
